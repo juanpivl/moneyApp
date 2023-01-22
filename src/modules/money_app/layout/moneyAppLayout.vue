@@ -1,6 +1,6 @@
 <template>
-  <h1>hola</h1>
-  <nav>
+
+  <!----  <nav>
     <ul>
     <li>
       <a class="nav-link" aria-current="page" href="#money">Home</a> |
@@ -11,9 +11,7 @@
     </li>
   </ul>
   </nav>
-
-  
-  
+-->
   <div>
     <router-view></router-view>
   </div>
