@@ -3,7 +3,7 @@ export default{
     component: () => import(/* webpackChunkName: "money" */ '@/modules/money_app/layout/moneyAppLayout.vue'),
     children: [
         {
-            path: '',
+            path: '/inicio',
             name: 'inicio',
             component: () => import(/* webpackChunkName: "money-inicio" */ '@/modules/money_app/views/InicioView.vue'),
         },

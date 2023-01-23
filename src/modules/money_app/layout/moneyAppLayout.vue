@@ -1,29 +1,36 @@
 <template>
+  <div class="MainContainer">
+    <SideBar />
+    <div class="SecondContainer">
+      <h1 class="UserName">Usuario</h1>
 
-  <!----  <nav>
-    <ul>
-    <li>
-      <a class="nav-link" aria-current="page" href="#money">Home</a> |
-    
-    </li>
-    <li>
-      <a class="nav-link" href="#otro">otro</a>
-    </li>
-  </ul>
-  </nav>
--->
-  <div>
-    <router-view></router-view>
+      <router-view></router-view>
+    </div>
   </div>
-   
- 
 </template>
 
 <script>
+import { defineAsyncComponent } from "vue";
 export default {
-  
+  components: {
+    SideBar: defineAsyncComponent(() => import("../components/SideBar.vue")),
+  },
 };
 </script>
 
-<style>
+<style scoped>
+.MainContainer {
+  display: flex;
+  background-color: var(--MainBgColor);
+}
+.SecondContainer {
+  width: 100%;
+  margin-top:20px ;
+  }
+.UserName{
+text-align: center;}
+.UserName {
+  color: white;
+}
 </style>
+
