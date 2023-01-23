@@ -1,7 +1,7 @@
 <template>
   <div class="InicioContainer">
     <h1>Inicio</h1>
-    <p>Este es el inicio</p>
+    <p>Este es ela inicio</p>
 
   </div>
 </template>
