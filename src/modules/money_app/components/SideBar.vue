@@ -8,7 +8,7 @@
       <span class="material-icons-outlined"> cloud_upload </span>
       <span class="material-icons-outlined" @click="LogOut"> settings </span>
     </div>
-    <div class="ButtonContainer" @click="LogOut">
+    <div class="ButtonContainer">
       <span class="material-icons-outlined" @click="LogOut"> logout </span>
     </div>
   </aside>
@@ -20,7 +20,7 @@ export default {
   methods: {
     LogOut() {
       return this.$router.push({
-        name: "AuthLayout",
+        name: "authLayout",
       });
     },
     Home() {
