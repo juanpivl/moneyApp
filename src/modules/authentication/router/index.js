@@ -1,23 +1,23 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import AuthLayout from '../layout/AuthLayout.vue'
-import moneyRouter from '@/modules/money_app/router'
 
-const routes = [
-  {
-    path: '/',
-    name: 'AuthLayout',
-    component: AuthLayout
-  },
+
+
+export default {
+
+  name: 'authLayout',
+  component: () => import(/* webpackChunkName: "auth layout" */ '@/modules/authentication/layout/AuthLayout.vue'),
+  children: [
+    {
+      path: '',
+      name: 'login',
+      component: () => import(/* webpackChunkName: "login" */ '@/modules/authentication/views/LoginView.vue'),
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: () => import(/* webpackChunkName: "register" */ '@/modules/authentication/views/RegisterView.vue'),
+    },
   
-  {
-    path: '/money',
-    ...moneyRouter
-  }
-]
+   
+  ]
 
-const routerAuth = createRouter({
-  history: createWebHashHistory(),
-  routes
-})
-
-export default routerAuth
+}

@@ -6,7 +6,7 @@
 </template>
 
 
-<style >
+<style scoped>
 
 :root{
   --MainBgColor:#f1f5f9;
