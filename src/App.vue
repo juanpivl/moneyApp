@@ -9,7 +9,8 @@
 <style >
 
 :root{
-  --MainBgColor:#f1f5f9;
+  --MainBgColor:#1f1d2c;
+  --MainAppColor:#262837;
 }
 
 *{
