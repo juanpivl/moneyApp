@@ -20,7 +20,7 @@ export default {
   methods: {
     LogOut() {
       return this.$router.push({
-        name: "AuthLayout",
+        name: "login",
       });
     },
     Home() {

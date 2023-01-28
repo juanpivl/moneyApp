@@ -36,21 +36,36 @@
 
 <script>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+import useAuth from "../composables/useAuth";
+import Swal from "sweetalert2";
+
 export default {
   setup() {
+    const router =useRouter()
+    const { createUser } = useAuth();
+
     const userForm = ref({
-      name: "",
-      email: "",
-      password: "",
+      name: "juan",
+      email: "juan@gmail.com",
+      password: "123456",
     });
 
     return {
       userForm,
       onSubmit: async () => {
-        if(!userForm.value.name || !userForm.value.email || !userForm.value.password){
-          alert("Favor de llenar los campos faltantes")
+        if (
+          !userForm.value.name ||
+          !userForm.value.email ||
+          !userForm.value.password
+        ) {
+          Swal.fire("Favor de llenar los campos faltantes");
+        } else {
+          const { ok, message } = await createUser(userForm.value);
+          console.log(ok, message);
+          if (!ok) Swal.fire("Error", "El email ya fue registrado", "error")
+          else router.push({name: 'inicio'})
         }
-        console.log(userForm.value)
       },
     };
   },
