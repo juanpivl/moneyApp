@@ -25,12 +25,12 @@ export default {
 }
 .SecondContainer {
   width: 100%;
-  margin-top:20px ;
+  margin-top:20px;
   }
 .UserName{
-text-align: center;}
-.UserName {
-  color: white;
+text-align: center;
+color: white;
 }
+
 </style>
 
