@@ -6,7 +6,7 @@
       <span class="material-icons-outlined"> chat </span>
       <span class="material-icons-outlined"> admin_panel_settings </span>
       <span class="material-icons-outlined"> cloud_upload </span>
-      <span class="material-icons-outlined" @click="LogOut"> settings </span>
+      <span class="material-icons-outlined"> settings </span>
     </div>
     <div class="ButtonContainer">
       <span class="material-icons-outlined" @click="LogOut"> logout </span>
@@ -20,7 +20,7 @@ export default {
   methods: {
     LogOut() {
       return this.$router.push({
-        name: "authLayout",
+        name: "login",
       });
     },
     Home() {
@@ -44,7 +44,7 @@ aside {
   width: 100px;
   padding: 1rem;
   overflow: hidden;
-  min-height: 99vh;
+  min-height: 90vh;
   background-color: var(--MainAppColor);
   color: var(--MainBgColor);
   border-radius: 20px;
